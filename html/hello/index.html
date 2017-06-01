@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <title>Socket</title>
+</head>
+
+<body>
+  <script src="/socket.io/socket.io.js "></script>
+  hi
+  <script type="text/javascript">
+    var socket = io.connect();
+    console.log("socket");
+    socket.on("msg", function(o) {
+      console.log(JSON.stringify(o));
+      socket.emit("msg", {});
+    });
+  </script>
+
+</body>
+
+</html>
